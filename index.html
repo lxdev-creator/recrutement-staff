@@ -10,9 +10,9 @@
       --bg: #050a0f;
       --surface: #0b1520;
       --card: #0f1e2e;
-      --border: #1a3050;
-      --accent: #00c2ff;
-      --accent2: #0077cc;
+      --border: #3a1f5c;
+      --accent: #b44cff;
+      --accent2: #7a2cff;
       --gold: #f0a500;
       --text: #c8dce8;
       --muted: #5a7a90;
@@ -37,26 +37,26 @@
     .bg-layer {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background:
-        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,100,200,.18) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 90% 80%, rgba(0,50,120,.12) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(122,44,255,.18) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 90% 80%, rgba(122,44,255,.12) 0%, transparent 60%),
         repeating-linear-gradient(
           0deg,
           transparent,
           transparent 59px,
-          rgba(0,194,255,.025) 60px
+          rgba(180,76,255,.025) 60px
         ),
         repeating-linear-gradient(
           90deg,
           transparent,
           transparent 59px,
-          rgba(0,194,255,.025) 60px
+          rgba(180,76,255,.025) 60px
         );
     }
 
     .bg-glow {
       position: fixed; top: -200px; left: 50%; transform: translateX(-50%);
       width: 900px; height: 500px;
-      background: radial-gradient(ellipse, rgba(0,100,255,.12) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(122,44,255,.12) 0%, transparent 70%);
       pointer-events: none; z-index: 0;
       animation: glow-pulse 6s ease-in-out infinite alternate;
     }
@@ -91,7 +91,7 @@
       font-size: 13px;
       color: var(--accent);
       margin-bottom: 24px;
-      box-shadow: 0 0 20px rgba(0,194,255,.2);
+      box-shadow: 0 0 20px rgba(180,76,255,.2);
     }
     .logo-badge::before {
       content: ''; display: block;
@@ -235,7 +235,7 @@
     input::placeholder, textarea::placeholder { color: var(--muted); opacity: .7; }
     input:focus, select:focus, textarea:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(0,194,255,.12);
+      box-shadow: 0 0 0 3px rgba(180,76,255,.12);
     }
 
     select {
@@ -267,7 +267,7 @@
       letter-spacing: 4px;
       color: #fff;
       background: linear-gradient(135deg, var(--accent2) 0%, var(--accent) 100%);
-      box-shadow: 0 4px 24px rgba(0,194,255,.3);
+      box-shadow: 0 4px 24px rgba(180,76,255,.3);
       transition: transform .2s, box-shadow .2s, filter .2s;
       position: relative;
       overflow: hidden;
@@ -279,7 +279,7 @@
     }
     .btn-submit:hover:not(:disabled) {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(0,194,255,.45);
+      box-shadow: 0 8px 32px rgba(180,76,255,.45);
       filter: brightness(1.1);
     }
     .btn-submit:active:not(:disabled) { transform: translateY(0); }
@@ -453,7 +453,7 @@
     const embed = {
       title: "📋 Nouvelle candidature Staff",
       description: `**${pseudo}** vient de soumettre une candidature !`,
-      color: gradeColors[grade] ?? 0x00c2ff,
+      color: gradeColors[grade] ?? 0xb44cff,
       fields: [
         { name: "👤 Pseudo Discord / In-game", value: pseudo,                inline: true  },
         { name: "🎂 Âge",                      value: age + " ans",          inline: true  },
